@@ -1,0 +1,13 @@
+<h1>Creatures#show</h1>
+<p>Find me in app/views/creatures/show.html.erb</p>
+
+
+<% if @creature %>
+
+<h3><%= @creature.name %> </h3>
+<p> <%= @creature.description %> </p>
+
+<% else %>
+	<h2> No creatures yet. Don't get bogged down, go capture them! </h2>
+	<%= link_to "I found a creature!", new_creature_path, class: 'btn btn-default' %>
+<% end %>

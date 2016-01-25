@@ -1,0 +1,19 @@
+<h1>Creatures#new</h1>
+<p>Find me in app/views/creatures/new.html.erb</p>
+
+<%=link_to "Edit Creature", edit_creature_path(creature), class: 'btn btn-default' %>
+
+<%= form_for @creature do |c| %>
+  <div>
+  <%= c.label :name %>
+  <%= c.text_field :name %>
+  </div>
+
+  <div>
+  <%= c.label :description %>
+  <%= c.text_area :description %>
+  </div>
+
+  <%= c.submit %>
+<% end %>
+
